@@ -2,7 +2,9 @@
 
 # Teleport - Instant SMS 2FA
 ![macOS Supported Version](https://img.shields.io/badge/Requires_macOS-13.0%2B-162734?style=flat-square)
-![Release Stage](https://img.shields.io/badge/Release%20Stage-Beta-162734?style=flat-square)
+![Version](https://img.shields.io/badge/Version-Beta-162734?style=flat-square)
+![Build](https://img.shields.io/badge/Build-1.4-162734?style=flat-square)
+
 
 Teleport is a macOS utility that monitors incoming texts and automatically copies any authentication codes it finds to your clipboard.
 
