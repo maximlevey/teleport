@@ -22,8 +22,8 @@ curl -L -o ~/Downloads/Teleport.zip https://github.com/maximlevey/Teleport/relea
 
 ## Installation
 
-2. Open the `Teleport.zip` on your device and follow the instructions.
-3. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
+1. Open the `Teleport.zip` on your device and follow the instructions.
+2. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
 
 ## Requirements
 
