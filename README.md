@@ -15,7 +15,7 @@ Teleport is a macOS utility that monitors incoming texts and automatically copie
 3. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
 
 ## Screenshots
-![Screenshots](https://github.com/maximlevey/Teleport/assets/72744507/5113ac2c-fc36-4f51-9d50-a86de99da06f)
+![UI_Screenshots](https://github.com/maximlevey/Teleport/assets/72744507/76025c7a-e15e-4cdd-bdae-720f50bf7d04)
 
 ## Requirements
 
