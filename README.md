@@ -2,20 +2,28 @@
 
 # Teleport - Instant SMS 2FA
 ![macOS Supported Version](https://img.shields.io/badge/Requires_macOS-13.0%2B-162734?style=flat-square)
-![Release Stage](https://img.shields.io/badge/Release%20Stage-Beta-162734?style=flat-square)
+![Version](https://img.shields.io/badge/Version-Beta-162734?style=flat-square)
+![Build](https://img.shields.io/badge/Build-1.4-162734?style=flat-square)
 
 Teleport is a macOS utility that monitors incoming texts and automatically copies any authentication codes it finds to your clipboard.
 
 > **Note** SMS-based two-factor authentication (2FA)is no longer considered to be a secure option for two-factor authentication, and should only be used when there are no other 2FA options available. Whenever possible, it's best to use time-based one-time password (TOTP) options such as those provided by 1Password or Google Authenticator. 
 
+## Screenshots
+![UI_Screenshots](https://github.com/maximlevey/Teleport/assets/72744507/76025c7a-e15e-4cdd-bdae-720f50bf7d04)
+
+## Download
+
+- Grab the latest version of Teleport from the [releases page](https://github.com/maximlevey/Teleport/releases)
+- Alternatively, install via script by running the following command
+```
+curl -L -o ~/Downloads/Teleport.zip https://github.com/maximlevey/Teleport/releases/Teleport.zip && unzip -q ~/Downloads/Teleport.zip -d /Applications && rm ~/Downloads/Teleport.zip
+```
+
 ## Installation
 
-1. Head to the [releases page](https://github.com/maximlevey/Teleport/releases) and download the latest `Teleport.dmg`
-2. Open the `Teleport.dmg` on your device and follow the instructions.
-3. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
-
-## Screenshots
-![Screenshots](https://github.com/maximlevey/Teleport/assets/72744507/5113ac2c-fc36-4f51-9d50-a86de99da06f)
+1. Open the `Teleport.zip` on your device and follow the instructions.
+2. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
 
 ## Requirements
 
