@@ -34,7 +34,7 @@ struct AccessView: View {
                 .foregroundColor(Color(NSColor.textColor))
 
             // App Version
-            Text("Version 1.4 Beta")
+            Text("Version 0.1")
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .padding(.bottom)

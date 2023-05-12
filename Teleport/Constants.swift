@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Cocoa
 
 // MARK: - Global Variables
 
@@ -31,6 +32,16 @@ extension Color {
             (r, g, b) = (0, 0, 0)
         }
         self.init(red: Double(r) / 255, green: Double(g) / 255, blue: Double(b) / 255)
+    }
+}
+
+// MARK: - Window Extension
+
+extension NSWindow {
+    func bringToFront() {
+        self.level = .floating
+        self.orderFrontRegardless()
+        self.makeKey()
     }
 }
 

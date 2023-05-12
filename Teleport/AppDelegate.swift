@@ -45,6 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     // Represents the application's main window.
     var window: NSWindow!
     
+    // Represents the application launch
+    var sessionLaunch = true
+    
     // The timestamp of the last processed message.
     var lastProcessedMessageDate = Int64(Date().timeIntervalSince1970 * 1000)
     
@@ -54,22 +57,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     // Timer to periodically check for new messages.
     var messageCheckTimer: DispatchSourceTimer?
     
+    // Timer to periodically check for database access.
+    var accessCheckTimer: DispatchSourceTimer?
+    
     // This initializer sets up the necessary configurations.
     override init() {
         super.init()
         requestNotificationPermissions()
-        // Adding an observer for the application's active status.
-        NotificationCenter.default.addObserver(forName: NSApplication.willBecomeActiveNotification, object: nil, queue: .main) { _ in
-            NSApp.setActivationPolicy(.regular)
-            self.activeView = .none
-            self.updateWindow()
-        }
     }
     
     // MARK: - Application Lifecycle
     
     // Called when the application is about to finish its launch process.
     func applicationWillFinishLaunching(_: Notification) {
+        NSApp.setActivationPolicy(.regular)
         activeView = .startup
         print("Teleport is starting...")
         
@@ -122,24 +123,51 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     // Called after the application has finished its launch process.
     func applicationDidFinishLaunching(_: Notification) {
         if UserDefaults.standard.bool(forKey: "hasLaunchedBefore") {
-            activeView = .startup
             requestFullDiskAccessReturning {
                 self.lastProcessedMessageDate = self.getLastMessageDate()
                 self.setupMessageCheckTimer()
+                self.setupAccessCheckTimer()
             }
         } else {
-            // First launch, show WelcomeView
+            // First launch, set to WelcomeView
             print("This is your first time using Teleport!\n")
-            activeView = .welcome
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
-            requestFullDiskAccessReturning {
                 self.lastProcessedMessageDate = self.getLastMessageDate()
                 self.setupMessageCheckTimer()
-            }
+                self.setupAccessCheckTimer()
+                self.activeView = .welcome
         }
-        updateWindow()
     }
     
+    // Called when the application becomes active
+    func applicationDidBecomeActive(_ notification: Notification) {
+        setupAccessCheckTimer()
+        // Check if it's the launch of the current session
+        if sessionLaunch {
+            updateWindow()
+            sessionLaunch = false
+            return
+        }
+        // Check if any open windows exist
+        if NSApp.windows.isEmpty {
+            // No open windows, proceed with further checks
+            if NSApp.activationPolicy() == .accessory {
+                // If the activation policy is .accessory, set it to .regular and update the window.
+                NSApp.setActivationPolicy(.regular)
+                print("Teleport set to regular activation")
+                self.activeView = .startup
+                updateWindow()
+            } else {
+                print("Teleport already activated")
+                self.activeView = .startup
+                updateWindow()
+            }
+        } else {
+            // Windows already open, do nothing
+            print("Teleport is already open")
+        }
+    }
+
     // Quits the application.
     func quitApp() {
         NSApplication.shared.terminate(nil)
@@ -234,7 +262,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     
     // MARK: - Window Management
     
-    // Updates the window based on the currently active view.
     func updateWindow() {
         var windowSize: CGSize
         var contentView: AnyView
@@ -255,6 +282,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
         case .none:
             return
         }
+        
         // Close any existing window
         window?.close()
         
@@ -263,24 +291,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
             styleMask: [.titled, .closable],
             backing: .buffered, defer: false
         )
+        
         window.titleVisibility = .hidden
         window.titlebarAppearsTransparent = true
         window.styleMask.insert(.fullSizeContentView)
         window.isReleasedWhenClosed = false
-        window.orderFrontRegardless()
-        window.makeKeyAndOrderFront(nil)
+        
+        window.isMovable = false
+        window.delegate = self
+        window.contentView = NSHostingView(rootView: contentView)
+        
+        // Activate the app and bring the window to the front
         NSApp.activate(ignoringOtherApps: true)
+        window.orderFront(nil)
+        window.makeKey()
         
         // Set the window's origin to the desired coordinates
         window.center()
-        
-        // Make the window not movable
-        window.isMovable = false
-        
-        window.delegate = self
-        
-        window.contentView = NSHostingView(rootView: contentView)
     }
+
+
     
     //  Window Delegate
     // Called when the window is about to close.
@@ -291,20 +321,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     
     // MARK: - Permissions
     
-    // Requests full disk access for the first launch of the application.
-    // If access is already granted, the provided completion handler is invoked.
-    func requestFullDiskAccessFirstLaunch(completion: @escaping () -> Void) {
-        let fileManager = FileManager.default
-        let dbPath = NSString(string: "~/Library/Messages/chat.db").expandingTildeInPath
-        
-        // Check if Teleport has full disk access permissions
-        if !fileManager.isReadableFile(atPath: dbPath) {
-        } else {
-            // Full Disk Access already granted, continue app execution
-            completion()
-        }
-    }
-    
     // Requests full disk access for the application if previously launched.
     // If access is already granted, the provided completion handler is invoked.
     func requestFullDiskAccessReturning(completion: @escaping () -> Void) {
@@ -314,15 +330,47 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
         // Check if Teleport has full disk access permissions
         if !fileManager.isReadableFile(atPath: dbPath) {
             // Show AccessView
+            self.activeView = .access
+        }
+        completion()
+    }
+    
+    func setupAccessCheckTimer() {
+        let queue = DispatchQueue(label: "com.example.Teleport.accessCheckTimer")
+
+        // Create a timer source and schedule it to run every 1 hour, starting 5 minutes from now
+        accessCheckTimer = DispatchSource.makeTimerSource(queue: queue)
+        accessCheckTimer?.schedule(
+            deadline: .now() + .seconds(300), repeating: .seconds(3600)
+        )
+
+        // Set the event handler for the timer to check for access
+        accessCheckTimer?.setEventHandler {
+            self.checkForAccess()
+        }
+
+        // Start the timer
+        accessCheckTimer?.resume()
+    }
+    
+    // Define a new function to check for access
+    func checkForAccess() {
+        let fileManager = FileManager.default
+        let dbPath = NSString(string: "~/Library/Messages/chat.db").expandingTildeInPath
+
+        if !fileManager.isReadableFile(atPath: dbPath) {
             DispatchQueue.main.async {
-                self.activeView = .access
-                self.updateWindow()
+                if NSApp.isActive {
+                    // If the app is active, show the AccessView
+                    self.activeView = .access
+                } else {
+                    // If the app is not active, show a notification
+                    self.showNotification(title: "Teleport running without acess", body: "Please relaunch Teleport and grant Full Disk Access")
+                }
             }
-        } else {
-            // Full Disk Access already granted, continue app execution
-            completion()
         }
     }
+
     
     // MARK: - Notifications
     
@@ -357,6 +405,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
         content.body = body
         content.categoryIdentifier = "teleportAuthCodeCategory"
         
+        // Attach app icon to the notification
+        if let appIcon = getApplicationIcon() {
+            if let iconAttachment = try? UNNotificationAttachment(identifier: "appIcon", url: appIcon, options: nil) {
+                content.attachments = [iconAttachment]
+            }
+        }
+        
         // Create notification trigger
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         
@@ -370,6 +425,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
             }
         }
     }
+    
+    func getApplicationIcon() -> URL? {
+        guard let iconUrl = Bundle.main.url(forResource: "AppIcon", withExtension: "icns") else {
+            print("Unable to find app icon URL")
+            return nil
+        }
+        return iconUrl
+    }
+
     
     // MARK: - Message Processing
     
@@ -401,31 +465,40 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
     
     // Set up a timer to periodically check for new messages.
     func setupMessageCheckTimer() {
-        print("Starting Teleport messageHandler...") // Log the start of timer setup
-        
-        // Create a dispatch queue to run the timer on
-        let queue = DispatchQueue(label: "com.example.Teleport.messageCheckTimer")
-        
-        // Create a timer source and schedule it to run every 500 milliseconds with a leeway of 100 milliseconds
-        messageCheckTimer = DispatchSource.makeTimerSource(queue: queue)
-        messageCheckTimer?.schedule(
-            deadline: .now(), repeating: .milliseconds(500), leeway: .milliseconds(100)
-        )
-        
-        // Set the event handler for the timer to call the `processNewMessage()` method
-        messageCheckTimer?.setEventHandler {
-            self.processNewMessage()
+        let fileManager = FileManager.default
+        let dbPath = NSString(string: "~/Library/Messages/chat.db").expandingTildeInPath
+
+        // Only set up the timer if we have access to the database
+        if fileManager.isReadableFile(atPath: dbPath) {
+            print("Starting Teleport messageHandler...") // Log the start of timer setup
+
+            // Create a dispatch queue to run the timer on
+            let queue = DispatchQueue(label: "com.example.Teleport.messageCheckTimer")
+
+            // Create a timer source and schedule it to run every 500 milliseconds with a leeway of 100 milliseconds
+            messageCheckTimer = DispatchSource.makeTimerSource(queue: queue)
+            messageCheckTimer?.schedule(
+                deadline: .now(), repeating: .milliseconds(500), leeway: .milliseconds(100)
+            )
+
+            // Set the event handler for the timer to call the `processNewMessage()` method
+            messageCheckTimer?.setEventHandler {
+                self.processNewMessage()
+            }
+
+            // Set the cancel handler for the timer to log a message indicating that the timer was canceled
+            messageCheckTimer?.setCancelHandler {
+                print("Teleport messageHandler cancelled")
+            }
+
+            // Start the timer
+            messageCheckTimer?.resume()
+            print("Teleport messageHandler started.\n") // Log that the timer has started
+            print("Teleport startup complete!\n") // Log that the Teleport startup process is complete
+        } else {
+            // If we don't have access to the database, show the AccessView
+            self.activeView = .access
         }
-        
-        // Set the cancel handler for the timer to log a message indicating that the timer was canceled
-        messageCheckTimer?.setCancelHandler {
-            print("Teleport messageHandler cancelled")
-        }
-        
-        // Start the timer
-        messageCheckTimer?.resume()
-        print("Teleport messageHandler started.\n") // Log that the timer has started
-        print("Teleport startup complete!\n") // Log that the Teleport startup process is complete
     }
     
     // Processes new messages by retrieving them from the Messages database, extracting the authentication code, and copying it to the clipboard.
@@ -500,7 +573,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, Observable
                 print("Error: \(error)") // Log any errors encountered during processing
             }
         } else {
+            messageCheckTimer?.cancel()
             print("Teleport unable to connect to chat.db") // Log a failure to connect to the database
+            // Set the view to Access
+            DispatchQueue.main.async {
+                self.activeView = .access
+            }
+            
         }
     }
     
