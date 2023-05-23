@@ -34,6 +34,7 @@ cd ~/Downloads && curl -LO https://github.com/maximlevey/Teleport/releases/downl
 - Click on the Teleport icon located on your Mac's Menu Bar
 - From the menu, select `System Preferences` 
 - Add Teleport to the list of Apps and enable it
+- Relaunch Teleport and watch codes teleport to your clipboard
 
 **On your iPhone**
 - Open settings and navigate to `Messages`
