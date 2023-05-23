@@ -38,6 +38,20 @@ Contributions are very welcome! I am by no means a developer and started Telepor
 
 Feel free to shoot me a message on [LinkedIn](https://www.linkedin.com/in/maximlevey/) or in the [Mac Admins Slack.](https://macadmins.slack.com)
 
+## FAQ
+
+**Why does Teleport need full disk access?**
+
+Teleport needs full disk access to be able to read your local chat database file (chat.db), which is stored in a protected area of your disk. This access is essential for Teleport to perform its core functionality of processing your chat messages. It's important to note that even though it's termed "full disk access," Teleport only reads from the chat.db file and doesn't modify it in any way.
+
+Apple's privacy regulations mandate that any app needing to access user data in protected areas of the filesystem must request full disk access, regardless of how limited or specific that access may be. It's a broad categorisation, intended to make it clear to users when an app needs to access sensitive data.
+
+**How are my messages and data stored?**
+
+Teleport is designed with your privacy and security as its utmost priority. All your messages and data are stored locally on your own device. The app doesn't have any network connectivity features, meaning it doesn't send your data to any external servers or third parties.
+
+When Teleport processes a message, it reads the content from the local chat database (chat.db), does its processing, and then discards the data it read. Your messages are not stored elsewhere or retained longer than necessary. The original chat database itself is not modified, ensuring that your data remains secure and under your control.
+
 ## License
 
 > Copyright (c) 2023 Maxim Levey
