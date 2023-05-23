@@ -28,7 +28,8 @@ Teleport is a macOS utility that monitors incoming texts and automatically copie
 cd ~/Downloads && curl -LO https://github.com/maximlevey/Teleport/releases/download/1.0/Teleport.zip && unzip Teleport.zip && mv Teleport/Teleport.app /Applications/ && rm -rf Teleport.zip Teleport/
 ```
 
-### Setup
+## Setup
+
 **On your Mac**
 - Click on the Teleport icon located on your Mac's Menu Bar
 - From the menu, select `System Preferences` 
