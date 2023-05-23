@@ -2,7 +2,7 @@
 
 # Teleport - Instant SMS 2FA
 ![macOS Supported Version](https://img.shields.io/badge/Requires_macOS-13.0%2B-162734?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1-162734?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.0-162734?style=flat-square)
 
 Teleport is a macOS utility that monitors incoming texts and automatically copies any authentication codes it finds to your clipboard.
 
@@ -18,13 +18,13 @@ cd ~/Downloads && curl -LO https://github.com/maximlevey/Teleport/releases/downl
 
 ## Installation
 
-1. Open the `Teleport.zip` on your device and follow the instructions.
+1. Open the `Teleport.zip` on your device, move `Teleport.app` to your applications, right click then select open.
 2. On your iPhone, go to Settings > Messages > Text Message Forwarding and enable forwarding to your Mac.
 
 ## Requirements
 
 - An iPhone running iOS 8.1 or later
-- A Mac running OS X Yosemite or later.
+- A Mac running macOS Ventura or later.
 - Both devices must be signed in to iCloud with the same Apple ID.
 
 > For more information about SMS Forwarding, see Apple Support article [HT208386](https://support.apple.com/en-au/HT208386)
