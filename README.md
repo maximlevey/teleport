@@ -42,7 +42,7 @@ cd ~/Downloads && curl -LO https://github.com/maximlevey/Teleport/releases/downl
 
 ## FAQ
 
-**Why does Teleport need full disk access?**
+**Why does Teleport need full disk access?** 
 
 Teleport needs full disk access to be able to read your local chat database file (chat.db), which is stored in a protected area of your disk. This access is essential for Teleport to perform its core functionality of processing your chat messages. It's important to note that even though it's termed "full disk access," Teleport only reads from the chat.db file and doesn't modify it in any way.
 
@@ -53,6 +53,12 @@ Apple's privacy regulations mandate that any app needing to access user data in 
 Teleport is designed with your privacy and security as its utmost priority. All your messages and data are stored locally on your own device. The app doesn't have any network connectivity features, meaning it doesn't send your data to any external servers or third parties.
 
 When Teleport processes a message, it reads the content from the local chat database (chat.db), does its processing, and then discards the data it read. Your messages are not stored elsewhere or retained longer than necessary. The original chat database itself is not modified, ensuring that your data remains secure and under your control.
+
+**Why am I seeing "App Can’t Be Opened Because It Is From an Unidentified Developer"?**
+
+This message appears because the app is not signed with a Developer ID. A Developer ID is a digital signature provided by Apple, which guarantees that the app is not tampered with and comes from a known source. It's part of Apple's Gatekeeper technology, which aims to protect users from malicious software.
+
+At this stage, I don't have a Developer ID, this does not mean that the app is harmful; it just signifies that it has not been officially verified by Apple. To open Teleport, control-click the app icon, then choose Open from the shortcut menu. Click Open in the dialog box. If prompted, enter an administrator name and password.
 
 ## Contributions
 
