@@ -7,75 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C331A0E2A09B7900033BF72 /* TeleportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A0D2A09B7900033BF72 /* TeleportApp.swift */; };
-		2C331A102A09B7900033BF72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A0F2A09B7900033BF72 /* ContentView.swift */; };
-		2C331A122A09B7910033BF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C331A112A09B7910033BF72 /* Assets.xcassets */; };
-		2C331A152A09B7910033BF72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C331A142A09B7910033BF72 /* Preview Assets.xcassets */; };
-		2C331A202A09B7910033BF72 /* TeleportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A1F2A09B7910033BF72 /* TeleportTests.swift */; };
-		2C331A2A2A09B7910033BF72 /* TeleportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A292A09B7910033BF72 /* TeleportUITests.swift */; };
-		2C331A2C2A09B7910033BF72 /* TeleportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A2B2A09B7910033BF72 /* TeleportUITestsLaunchTests.swift */; };
-		2C331A3A2A09B7E40033BF72 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 2C331A392A09B7E40033BF72 /* SQLite */; };
-		2C331A402A09BA980033BF72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A3F2A09BA980033BF72 /* AppDelegate.swift */; };
-		2C331A462A0A38130033BF72 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A452A0A38130033BF72 /* WelcomeView.swift */; };
-		2C331A482A0A649E0033BF72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C331A472A0A649E0033BF72 /* Constants.swift */; };
-		2C3B68532A0B277700DE1533 /* AccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B68522A0B277700DE1533 /* AccessView.swift */; };
-		2C3B68562A0B3D4700DE1533 /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B68552A0B3D4700DE1533 /* StartupView.swift */; };
+		2C12E6DB2A13B8CD00F2552A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C12E6DA2A13B8CD00F2552A /* Preview Assets.xcassets */; };
+		2C5CA2F32A18E9860028B5EB /* Style Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA2F22A18E9860028B5EB /* Style Handler.swift */; };
+		2C5CA2F52A18EDF10028B5EB /* Permission View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA2F42A18EDF10028B5EB /* Permission View.swift */; };
+		2C5CA2FA2A18FAE10028B5EB /* Standard View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA2F92A18FAE10028B5EB /* Standard View.swift */; };
+		2C5CA2FC2A1901900028B5EB /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA2FB2A1901900028B5EB /* PreferenceView.swift */; };
+		2C8682FF2A13B90D008A6D6A /* Teleport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8682F82A13B90D008A6D6A /* Teleport.swift */; };
+		2C8683032A13B90D008A6D6A /* Message Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8682FD2A13B90D008A6D6A /* Message Handler.swift */; };
+		2C8683062A13BB55008A6D6A /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 2C8683052A13BB55008A6D6A /* SQLite */; };
+		2CF90E122A13DC0F00FFF4B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CF90E112A13DC0F00FFF4B2 /* Info.plist */; };
+		2CF90E142A14520A00FFF4B2 /* Notification Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF90E132A14520A00FFF4B2 /* Notification Handler.swift */; };
+		2CF90E1C2A14537E00FFF4B2 /* Preference Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF90E1B2A14537E00FFF4B2 /* Preference Manager.swift */; };
+		2CFE9B932A145498002C39D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CFE9B922A145498002C39D3 /* Assets.xcassets */; };
+		2CFE9B982A1456BC002C39D3 /* Process Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE9B972A1456BC002C39D3 /* Process Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C331A1C2A09B7910033BF72 /* PBXContainerItemProxy */ = {
+		2C12E6E22A13B8CE00F2552A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2C331A022A09B7900033BF72 /* Project object */;
+			containerPortal = 2C12E6C82A13B8CD00F2552A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C331A092A09B7900033BF72;
-			remoteInfo = Teleport;
+			remoteGlobalIDString = 2C12E6CF2A13B8CD00F2552A;
+			remoteInfo = TeleportLite;
 		};
-		2C331A262A09B7910033BF72 /* PBXContainerItemProxy */ = {
+		2C12E6EC2A13B8CE00F2552A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2C331A022A09B7900033BF72 /* Project object */;
+			containerPortal = 2C12E6C82A13B8CD00F2552A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C331A092A09B7900033BF72;
-			remoteInfo = Teleport;
+			remoteGlobalIDString = 2C12E6CF2A13B8CD00F2552A;
+			remoteInfo = TeleportLite;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C331A0A2A09B7900033BF72 /* Teleport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleport.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C331A0D2A09B7900033BF72 /* TeleportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportApp.swift; sourceTree = "<group>"; };
-		2C331A0F2A09B7900033BF72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2C331A112A09B7910033BF72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C331A142A09B7910033BF72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C331A162A09B7910033BF72 /* Teleport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Teleport.entitlements; sourceTree = "<group>"; };
-		2C331A1B2A09B7910033BF72 /* TeleportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C331A1F2A09B7910033BF72 /* TeleportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportTests.swift; sourceTree = "<group>"; };
-		2C331A252A09B7910033BF72 /* TeleportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C331A292A09B7910033BF72 /* TeleportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportUITests.swift; sourceTree = "<group>"; };
-		2C331A2B2A09B7910033BF72 /* TeleportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleportUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2C331A3F2A09BA980033BF72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C331A452A0A38130033BF72 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		2C331A472A0A649E0033BF72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2C3B68522A0B277700DE1533 /* AccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessView.swift; sourceTree = "<group>"; };
-		2C3B68552A0B3D4700DE1533 /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
-		2CBFF5B22A0CBE730086F292 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C12E6D02A13B8CD00F2552A /* Teleport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teleport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C12E6DA2A13B8CD00F2552A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C12E6DC2A13B8CD00F2552A /* Teleport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Teleport.entitlements; sourceTree = "<group>"; };
+		2C12E6E12A13B8CE00F2552A /* TeleportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C12E6EB2A13B8CE00F2552A /* TeleportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeleportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C5CA2F22A18E9860028B5EB /* Style Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Style Handler.swift"; sourceTree = "<group>"; };
+		2C5CA2F42A18EDF10028B5EB /* Permission View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Permission View.swift"; sourceTree = "<group>"; };
+		2C5CA2F92A18FAE10028B5EB /* Standard View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Standard View.swift"; sourceTree = "<group>"; };
+		2C5CA2FB2A1901900028B5EB /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		2C8682F82A13B90D008A6D6A /* Teleport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teleport.swift; sourceTree = "<group>"; };
+		2C8682FD2A13B90D008A6D6A /* Message Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message Handler.swift"; sourceTree = "<group>"; };
+		2CF90E112A13DC0F00FFF4B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF90E132A14520A00FFF4B2 /* Notification Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification Handler.swift"; sourceTree = "<group>"; };
+		2CF90E1B2A14537E00FFF4B2 /* Preference Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preference Manager.swift"; sourceTree = "<group>"; };
+		2CFE9B922A145498002C39D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CFE9B972A1456BC002C39D3 /* Process Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Process Manager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C331A072A09B7900033BF72 /* Frameworks */ = {
+		2C12E6CD2A13B8CD00F2552A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C331A3A2A09B7E40033BF72 /* SQLite in Frameworks */,
+				2C8683062A13BB55008A6D6A /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A182A09B7910033BF72 /* Frameworks */ = {
+		2C12E6DE2A13B8CE00F2552A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A222A09B7910033BF72 /* Frameworks */ = {
+		2C12E6E82A13B8CE00F2552A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,87 +84,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C331A012A09B7900033BF72 = {
+		2C12E6C72A13B8CD00F2552A = {
 			isa = PBXGroup;
 			children = (
-				2C331A0C2A09B7900033BF72 /* Teleport */,
-				2C331A1E2A09B7910033BF72 /* TeleportTests */,
-				2C331A282A09B7910033BF72 /* TeleportUITests */,
-				2C331A0B2A09B7900033BF72 /* Products */,
+				2C12E6D22A13B8CD00F2552A /* Teleport */,
+				2C12E6D12A13B8CD00F2552A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C331A0B2A09B7900033BF72 /* Products */ = {
+		2C12E6D12A13B8CD00F2552A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C331A0A2A09B7900033BF72 /* Teleport.app */,
-				2C331A1B2A09B7910033BF72 /* TeleportTests.xctest */,
-				2C331A252A09B7910033BF72 /* TeleportUITests.xctest */,
+				2C12E6D02A13B8CD00F2552A /* Teleport.app */,
+				2C12E6E12A13B8CE00F2552A /* TeleportTests.xctest */,
+				2C12E6EB2A13B8CE00F2552A /* TeleportUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C331A0C2A09B7900033BF72 /* Teleport */ = {
+		2C12E6D22A13B8CD00F2552A /* Teleport */ = {
 			isa = PBXGroup;
 			children = (
-				2CBFF6122A0DE1140086F292 /* New Group */,
-				2CBFF5B22A0CBE730086F292 /* Info.plist */,
-				2C331A0D2A09B7900033BF72 /* TeleportApp.swift */,
-				2C331A3F2A09BA980033BF72 /* AppDelegate.swift */,
-				2C331A472A0A649E0033BF72 /* Constants.swift */,
-				2C3B68552A0B3D4700DE1533 /* StartupView.swift */,
-				2C331A452A0A38130033BF72 /* WelcomeView.swift */,
-				2C331A0F2A09B7900033BF72 /* ContentView.swift */,
-				2C3B68522A0B277700DE1533 /* AccessView.swift */,
-				2C331A112A09B7910033BF72 /* Assets.xcassets */,
-				2C331A162A09B7910033BF72 /* Teleport.entitlements */,
-				2C331A132A09B7910033BF72 /* Preview Content */,
+				2C8682F82A13B90D008A6D6A /* Teleport.swift */,
+				2C5CA2F62A18F2060028B5EB /* Handlers */,
+				2C5CA2F72A18F2290028B5EB /* Views */,
+				2CF90E112A13DC0F00FFF4B2 /* Info.plist */,
+				2CFE9B922A145498002C39D3 /* Assets.xcassets */,
+				2C12E6DC2A13B8CD00F2552A /* Teleport.entitlements */,
+				2C12E6D92A13B8CD00F2552A /* Preview Content */,
 			);
 			path = Teleport;
 			sourceTree = "<group>";
 		};
-		2C331A132A09B7910033BF72 /* Preview Content */ = {
+		2C12E6D92A13B8CD00F2552A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2C331A142A09B7910033BF72 /* Preview Assets.xcassets */,
+				2C12E6DA2A13B8CD00F2552A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2C331A1E2A09B7910033BF72 /* TeleportTests */ = {
+		2C5CA2F62A18F2060028B5EB /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				2C331A1F2A09B7910033BF72 /* TeleportTests.swift */,
+				2C8682FD2A13B90D008A6D6A /* Message Handler.swift */,
+				2CF90E132A14520A00FFF4B2 /* Notification Handler.swift */,
+				2CF90E1B2A14537E00FFF4B2 /* Preference Manager.swift */,
+				2CFE9B972A1456BC002C39D3 /* Process Manager.swift */,
+				2C5CA2F22A18E9860028B5EB /* Style Handler.swift */,
 			);
-			path = TeleportTests;
+			path = Handlers;
 			sourceTree = "<group>";
 		};
-		2C331A282A09B7910033BF72 /* TeleportUITests */ = {
+		2C5CA2F72A18F2290028B5EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C331A292A09B7910033BF72 /* TeleportUITests.swift */,
-				2C331A2B2A09B7910033BF72 /* TeleportUITestsLaunchTests.swift */,
+				2C5CA2F42A18EDF10028B5EB /* Permission View.swift */,
+				2C5CA2FB2A1901900028B5EB /* PreferenceView.swift */,
+				2C5CA2F92A18FAE10028B5EB /* Standard View.swift */,
 			);
-			path = TeleportUITests;
-			sourceTree = "<group>";
-		};
-		2CBFF6122A0DE1140086F292 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C331A092A09B7900033BF72 /* Teleport */ = {
+		2C12E6CF2A13B8CD00F2552A /* Teleport */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C331A2F2A09B7910033BF72 /* Build configuration list for PBXNativeTarget "Teleport" */;
+			buildConfigurationList = 2C12E6F52A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "Teleport" */;
 			buildPhases = (
-				2C331A062A09B7900033BF72 /* Sources */,
-				2C331A072A09B7900033BF72 /* Frameworks */,
-				2C331A082A09B7900033BF72 /* Resources */,
+				2CE748EA2A18773700977AF3 /* ShellScript */,
+				2C12E6CC2A13B8CD00F2552A /* Sources */,
+				2C12E6CD2A13B8CD00F2552A /* Frameworks */,
+				2C12E6CE2A13B8CD00F2552A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -173,72 +164,72 @@
 			);
 			name = Teleport;
 			packageProductDependencies = (
-				2C331A392A09B7E40033BF72 /* SQLite */,
+				2C8683052A13BB55008A6D6A /* SQLite */,
 			);
-			productName = Teleport;
-			productReference = 2C331A0A2A09B7900033BF72 /* Teleport.app */;
+			productName = TeleportLite;
+			productReference = 2C12E6D02A13B8CD00F2552A /* Teleport.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2C331A1A2A09B7910033BF72 /* TeleportTests */ = {
+		2C12E6E02A13B8CE00F2552A /* TeleportTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C331A322A09B7910033BF72 /* Build configuration list for PBXNativeTarget "TeleportTests" */;
+			buildConfigurationList = 2C12E6F82A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "TeleportTests" */;
 			buildPhases = (
-				2C331A172A09B7910033BF72 /* Sources */,
-				2C331A182A09B7910033BF72 /* Frameworks */,
-				2C331A192A09B7910033BF72 /* Resources */,
+				2C12E6DD2A13B8CE00F2552A /* Sources */,
+				2C12E6DE2A13B8CE00F2552A /* Frameworks */,
+				2C12E6DF2A13B8CE00F2552A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C331A1D2A09B7910033BF72 /* PBXTargetDependency */,
+				2C12E6E32A13B8CE00F2552A /* PBXTargetDependency */,
 			);
 			name = TeleportTests;
-			productName = TeleportTests;
-			productReference = 2C331A1B2A09B7910033BF72 /* TeleportTests.xctest */;
+			productName = TeleportLiteTests;
+			productReference = 2C12E6E12A13B8CE00F2552A /* TeleportTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2C331A242A09B7910033BF72 /* TeleportUITests */ = {
+		2C12E6EA2A13B8CE00F2552A /* TeleportUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C331A352A09B7910033BF72 /* Build configuration list for PBXNativeTarget "TeleportUITests" */;
+			buildConfigurationList = 2C12E6FB2A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "TeleportUITests" */;
 			buildPhases = (
-				2C331A212A09B7910033BF72 /* Sources */,
-				2C331A222A09B7910033BF72 /* Frameworks */,
-				2C331A232A09B7910033BF72 /* Resources */,
+				2C12E6E72A13B8CE00F2552A /* Sources */,
+				2C12E6E82A13B8CE00F2552A /* Frameworks */,
+				2C12E6E92A13B8CE00F2552A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C331A272A09B7910033BF72 /* PBXTargetDependency */,
+				2C12E6ED2A13B8CE00F2552A /* PBXTargetDependency */,
 			);
 			name = TeleportUITests;
-			productName = TeleportUITests;
-			productReference = 2C331A252A09B7910033BF72 /* TeleportUITests.xctest */;
+			productName = TeleportLiteUITests;
+			productReference = 2C12E6EB2A13B8CE00F2552A /* TeleportUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C331A022A09B7900033BF72 /* Project object */ = {
+		2C12E6C82A13B8CD00F2552A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					2C331A092A09B7900033BF72 = {
+					2C12E6CF2A13B8CD00F2552A = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					2C331A1A2A09B7910033BF72 = {
+					2C12E6E02A13B8CE00F2552A = {
 						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 2C331A092A09B7900033BF72;
+						TestTargetID = 2C12E6CF2A13B8CD00F2552A;
 					};
-					2C331A242A09B7910033BF72 = {
+					2C12E6EA2A13B8CE00F2552A = {
 						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 2C331A092A09B7900033BF72;
+						TestTargetID = 2C12E6CF2A13B8CD00F2552A;
 					};
 				};
 			};
-			buildConfigurationList = 2C331A052A09B7900033BF72 /* Build configuration list for PBXProject "Teleport" */;
+			buildConfigurationList = 2C12E6CB2A13B8CD00F2552A /* Build configuration list for PBXProject "Teleport" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,39 +237,40 @@
 				en,
 				Base,
 			);
-			mainGroup = 2C331A012A09B7900033BF72;
+			mainGroup = 2C12E6C72A13B8CD00F2552A;
 			packageReferences = (
-				2C331A382A09B7E40033BF72 /* XCRemoteSwiftPackageReference "SQLite" */,
+				2C8683042A13BB55008A6D6A /* XCRemoteSwiftPackageReference "SQLite" */,
 			);
-			productRefGroup = 2C331A0B2A09B7900033BF72 /* Products */;
+			productRefGroup = 2C12E6D12A13B8CD00F2552A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C331A092A09B7900033BF72 /* Teleport */,
-				2C331A1A2A09B7910033BF72 /* TeleportTests */,
-				2C331A242A09B7910033BF72 /* TeleportUITests */,
+				2C12E6CF2A13B8CD00F2552A /* Teleport */,
+				2C12E6E02A13B8CE00F2552A /* TeleportTests */,
+				2C12E6EA2A13B8CE00F2552A /* TeleportUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C331A082A09B7900033BF72 /* Resources */ = {
+		2C12E6CE2A13B8CD00F2552A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C331A152A09B7910033BF72 /* Preview Assets.xcassets in Resources */,
-				2C331A122A09B7910033BF72 /* Assets.xcassets in Resources */,
+				2CF90E122A13DC0F00FFF4B2 /* Info.plist in Resources */,
+				2CFE9B932A145498002C39D3 /* Assets.xcassets in Resources */,
+				2C12E6DB2A13B8CD00F2552A /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A192A09B7910033BF72 /* Resources */ = {
+		2C12E6DF2A13B8CE00F2552A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A232A09B7910033BF72 /* Resources */ = {
+		2C12E6E92A13B8CE00F2552A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,60 +279,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CE748EA2A18773700977AF3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2C331A062A09B7900033BF72 /* Sources */ = {
+		2C12E6CC2A13B8CD00F2552A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C331A482A0A649E0033BF72 /* Constants.swift in Sources */,
-				2C331A402A09BA980033BF72 /* AppDelegate.swift in Sources */,
-				2C331A102A09B7900033BF72 /* ContentView.swift in Sources */,
-				2C3B68562A0B3D4700DE1533 /* StartupView.swift in Sources */,
-				2C331A0E2A09B7900033BF72 /* TeleportApp.swift in Sources */,
-				2C3B68532A0B277700DE1533 /* AccessView.swift in Sources */,
-				2C331A462A0A38130033BF72 /* WelcomeView.swift in Sources */,
+				2C5CA2F32A18E9860028B5EB /* Style Handler.swift in Sources */,
+				2C5CA2FA2A18FAE10028B5EB /* Standard View.swift in Sources */,
+				2C8683032A13B90D008A6D6A /* Message Handler.swift in Sources */,
+				2CF90E1C2A14537E00FFF4B2 /* Preference Manager.swift in Sources */,
+				2CF90E142A14520A00FFF4B2 /* Notification Handler.swift in Sources */,
+				2CFE9B982A1456BC002C39D3 /* Process Manager.swift in Sources */,
+				2C5CA2FC2A1901900028B5EB /* PreferenceView.swift in Sources */,
+				2C8682FF2A13B90D008A6D6A /* Teleport.swift in Sources */,
+				2C5CA2F52A18EDF10028B5EB /* Permission View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A172A09B7910033BF72 /* Sources */ = {
+		2C12E6DD2A13B8CE00F2552A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C331A202A09B7910033BF72 /* TeleportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C331A212A09B7910033BF72 /* Sources */ = {
+		2C12E6E72A13B8CE00F2552A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C331A2C2A09B7910033BF72 /* TeleportUITestsLaunchTests.swift in Sources */,
-				2C331A2A2A09B7910033BF72 /* TeleportUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C331A1D2A09B7910033BF72 /* PBXTargetDependency */ = {
+		2C12E6E32A13B8CE00F2552A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2C331A092A09B7900033BF72 /* Teleport */;
-			targetProxy = 2C331A1C2A09B7910033BF72 /* PBXContainerItemProxy */;
+			target = 2C12E6CF2A13B8CD00F2552A /* Teleport */;
+			targetProxy = 2C12E6E22A13B8CE00F2552A /* PBXContainerItemProxy */;
 		};
-		2C331A272A09B7910033BF72 /* PBXTargetDependency */ = {
+		2C12E6ED2A13B8CE00F2552A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2C331A092A09B7900033BF72 /* Teleport */;
-			targetProxy = 2C331A262A09B7910033BF72 /* PBXContainerItemProxy */;
+			target = 2C12E6CF2A13B8CD00F2552A /* Teleport */;
+			targetProxy = 2C12E6EC2A13B8CE00F2552A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2C331A2D2A09B7910033BF72 /* Debug */ = {
+		2C12E6F32A13B8CE00F2552A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -397,12 +408,10 @@
 			};
 			name = Debug;
 		};
-		2C331A2E2A09B7910033BF72 /* Release */ = {
+		2C12E6F42A13B8CE00F2552A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -452,30 +461,27 @@
 			};
 			name = Release;
 		};
-		2C331A302A09B7910033BF72 /* Debug */ = {
+		2C12E6F62A13B8CE00F2552A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Teleport/Teleport.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teleport/Preview Content\"";
 				DEVELOPMENT_TEAM = 5XRAT3Q58Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Teleport/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximlevey.Teleport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -483,30 +489,27 @@
 			};
 			name = Debug;
 		};
-		2C331A312A09B7910033BF72 /* Release */ = {
+		2C12E6F72A13B8CE00F2552A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Teleport/Teleport.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teleport/Preview Content\"";
 				DEVELOPMENT_TEAM = 5XRAT3Q58Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Teleport/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maximlevey.Teleport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -514,7 +517,7 @@
 			};
 			name = Release;
 		};
-		2C331A332A09B7910033BF72 /* Debug */ = {
+		2C12E6F92A13B8CE00F2552A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -533,7 +536,7 @@
 			};
 			name = Debug;
 		};
-		2C331A342A09B7910033BF72 /* Release */ = {
+		2C12E6FA2A13B8CE00F2552A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -552,7 +555,7 @@
 			};
 			name = Release;
 		};
-		2C331A362A09B7910033BF72 /* Debug */ = {
+		2C12E6FC2A13B8CE00F2552A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -565,11 +568,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Teleport;
+				TEST_TARGET_NAME = TeleportLite;
 			};
 			name = Debug;
 		};
-		2C331A372A09B7910033BF72 /* Release */ = {
+		2C12E6FD2A13B8CE00F2552A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -582,45 +585,45 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Teleport;
+				TEST_TARGET_NAME = TeleportLite;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C331A052A09B7900033BF72 /* Build configuration list for PBXProject "Teleport" */ = {
+		2C12E6CB2A13B8CD00F2552A /* Build configuration list for PBXProject "Teleport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C331A2D2A09B7910033BF72 /* Debug */,
-				2C331A2E2A09B7910033BF72 /* Release */,
+				2C12E6F32A13B8CE00F2552A /* Debug */,
+				2C12E6F42A13B8CE00F2552A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C331A2F2A09B7910033BF72 /* Build configuration list for PBXNativeTarget "Teleport" */ = {
+		2C12E6F52A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "Teleport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C331A302A09B7910033BF72 /* Debug */,
-				2C331A312A09B7910033BF72 /* Release */,
+				2C12E6F62A13B8CE00F2552A /* Debug */,
+				2C12E6F72A13B8CE00F2552A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C331A322A09B7910033BF72 /* Build configuration list for PBXNativeTarget "TeleportTests" */ = {
+		2C12E6F82A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "TeleportTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C331A332A09B7910033BF72 /* Debug */,
-				2C331A342A09B7910033BF72 /* Release */,
+				2C12E6F92A13B8CE00F2552A /* Debug */,
+				2C12E6FA2A13B8CE00F2552A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C331A352A09B7910033BF72 /* Build configuration list for PBXNativeTarget "TeleportUITests" */ = {
+		2C12E6FB2A13B8CE00F2552A /* Build configuration list for PBXNativeTarget "TeleportUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C331A362A09B7910033BF72 /* Debug */,
-				2C331A372A09B7910033BF72 /* Release */,
+				2C12E6FC2A13B8CE00F2552A /* Debug */,
+				2C12E6FD2A13B8CE00F2552A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -628,7 +631,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2C331A382A09B7E40033BF72 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+		2C8683042A13BB55008A6D6A /* XCRemoteSwiftPackageReference "SQLite" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
 			requirement = {
@@ -639,12 +642,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2C331A392A09B7E40033BF72 /* SQLite */ = {
+		2C8683052A13BB55008A6D6A /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2C331A382A09B7E40033BF72 /* XCRemoteSwiftPackageReference "SQLite" */;
+			package = 2C8683042A13BB55008A6D6A /* XCRemoteSwiftPackageReference "SQLite" */;
 			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 2C331A022A09B7900033BF72 /* Project object */;
+	rootObject = 2C12E6C82A13B8CD00F2552A /* Project object */;
 }
