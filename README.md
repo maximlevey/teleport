@@ -6,7 +6,9 @@
 
 Teleport is a macOS utility that monitors incoming texts and automatically copies any authentication codes it finds to your clipboard.
 
-> **Note** SMS-based two-factor authentication (2FA)is no longer considered to be a secure option for two-factor authentication, and should only be used when there are no other 2FA options available. Whenever possible, it's best to use time-based one-time password (TOTP) options such as those provided by 1Password or Google Authenticator. 
+![Screenshot 2023-07-31 at 10 19 01 am](https://github.com/maximlevey/Teleport/assets/72744507/68a893df-8df7-4f2b-a159-be9689731482)
+
+> **Note** SMS-based two-factor authentication (2FA)is no longer considered to be a secure option for two-factor authentication, and should only be used when there are no other 2FA options available. Whenever possible, it's best to use time-based one-time password (TOTP) options such as those provided by 1Password or Google Authenticator.
 
 ## Requirements
 
